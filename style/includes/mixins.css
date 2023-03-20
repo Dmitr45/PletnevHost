@@ -1,0 +1,10 @@
+@-webkit-keyframes sprite-animation {
+  from {
+    background-position: 0 0;
+  }
+}
+@keyframes sprite-animation {
+  from {
+    background-position: 0 0;
+  }
+}

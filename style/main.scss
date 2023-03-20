@@ -1,0 +1,1043 @@
+@import "variables.scss";
+@import "includes/normalize.scss";
+@import "../fonts/font.scss";
+@import "includes/mixins.scss";
+@import "icons.scss";
+@import "buttons.scss";
+@import "box/boxes.scss";
+@import "grid/grid-system.scss";
+@import "grid/grid.scss";
+@import "includes/animate.scss";
+@import url(//fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700,800);
+@import "extensions/_rd-navbar.scss";
+@import "extensions/_rd-mailform.scss";
+@import "extensions/_rd-google-map.scss";
+@import "extensions/_rd-parallax.scss";
+@import "extensions/_ui-to-top.scss";
+@import "extensions/_responsive-tabs.scss";
+@import "extensions/_owl-carousel.scss";
+
+.page {
+    overflow: hidden;
+  }
+  
+  /*
+  * @subsection Boxed Layout
+  */
+  
+  html.boxed {
+    body {
+      background: $layout-boxed-bg;
+    }
+  
+    .page {
+      background: $content-bg;
+      box-shadow: $box-shadow-ambient, $box-shadow-key-light;
+      max-width: $layout-boxed-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+/*
+* @subsection   Text Styling
+*/
+
+.text-italic {
+    font-style: italic;
+  }
+  
+  .text-underline {
+    text-decoration: underline;
+  }
+  
+  .text-strike {
+    text-decoration: line-through;
+  }
+  
+  .text-thin {
+    font-weight: 100;
+  }
+  
+  .text-light {
+    font-weight: 300;
+  }
+  
+  .text-regular{
+    font-weight: 400;
+  }
+  
+  .text-medium{
+    font-weight: 500;
+  }
+  
+  .text-sbold{
+    font-weight: 600;
+  }
+  
+  .text-bold, strong {
+    font-weight: 700;
+  }
+  
+  .text-ubold {
+    font-weight: 900;
+  }
+  .text-uppercase{
+    text-transform: uppercase;
+  }
+
+  /*
+* @subsection   Text Alignment
+*/
+
+.text-left {
+    text-align: left;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  @mixin make-text-alignment($resolution){
+    .text-#{$resolution}-left {
+      text-align: left;
+    }
+  
+    .text-#{$resolution}-center {
+      text-align: center;
+    }
+  
+    .text-#{$resolution}-right {
+      text-align: right;
+    }
+  }
+  
+  html:not(.lt-ie10) {
+    @media (min-width: $screen-xs-min) {
+      @include make-text-alignment("xs");
+    }
+  
+    @media (min-width: $screen-sm-min) {
+      @include make-text-alignment("sm");
+    }
+  
+    @media (min-width: $screen-md-min) {
+      @include make-text-alignment("md");
+    }
+  
+    @media (min-width: $screen-lg-min) {
+      @include make-text-alignment("lg");
+    }
+  }
+
+  /*
+* @subsection   Floating System
+*/
+
+.pull-left {
+    float: left;
+  }
+  
+  .pull-none {
+    float: none;
+  }
+  
+  .pull-right {
+    float: right;
+  }
+  
+  @mixin make-floating($resolution){
+    .pull-#{$resolution}-left {
+      float: left;
+    }
+  
+    .pull-#{$resolution}-none {
+      float: none;
+    }
+  
+    .pull-#{$resolution}-right {
+      float: right;
+    }
+  }
+  
+  @media (min-width: $screen-xs-min) {
+    @include make-floating("xs");
+  }
+  
+  @media (min-width: $screen-sm-min) {
+    @include make-floating("sm");
+  }
+  
+  @media (min-width: $screen-md-min) {
+    @include make-floating("md");
+  }
+  
+  @media (min-width: $screen-lg-min) {
+    @include make-floating("lg");
+  }
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//                                 Main
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+html {
+    font-size: 60px;
+  
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-min - 1) {
+      font-size: 70px;
+    }
+    @media (min-width: $screen-md-min) and (max-width: $screen-lg-min - 1) {
+      font-size: 80px;
+    }
+    @media (min-width: $screen-lg-min) {
+      font-size: 100px;
+    }
+    .old-ie {
+      display: none;
+    }
+    &.lt-ie11 {
+      .old-ie{
+        display: block;
+      }
+    }
+  }
+  body {
+    font-family: $default-font-family;
+    font-weight: $default-font-weight;
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    -webkit-text-size-adjust: none;
+    color: lighten(saturate(adjust_hue($contrast, 252), 5.617977528089892%), 17.45098039215686%);
+    background: $white;
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-min - 1) {
+      font-size: 18px;
+    }
+    @media (min-width: $screen-md-min) {
+      font-size: $default-font-size;
+      line-height: $default-line-height;
+    }
+  }
+  /*
+  * @subsection   Typography
+  * @description  Describes default font settings for basic html elements and
+  *               css classes
+  */
+  h1, h2, h3, h4, h5, h6,
+  .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+    display: block;
+    font-weight: 400;
+    a:hover {
+      color: $primary;
+    }
+  }
+  
+  h1, .heading-1 {
+    font-size: 38px;
+    line-height: 1.33;
+    @media (min-width: $screen-sm-min) {
+      font-size: 60px;
+      line-height: 60px;
+    }
+    > .heading-2{
+      margin-bottom: rem(33px);
+    }
+  }
+  h2, .heading-2 {
+    font-size: 24px;
+    line-height: 1.5;
+    mark{
+      padding: 5px 60px;
+    }
+    @media (min-width: $screen-sm-min) {
+      font-size: 52px;
+      line-height: 70px;
+    }
+  }
+  h3, .heading-3 {
+    font-size: 30px;
+    line-height: 1.5;
+    @media (min-width: $screen-sm-min) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+  h4, .heading-4 {
+    font-size: 26px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    a{
+      color: $primary;
+      &:hover{
+        color: lighten(saturate(adjust_hue($contrast, 252), 5.617977528089892%), 17.45098039215686%);
+      }
+    }
+  }
+  h5, .heading-5 {
+    font-size: 22px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 19px;
+      line-height: 1.66;
+    }
+  }
+  h6, .heading-6 {
+    font-size: 18px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+  p, .list, .contact-info {
+    font-weight: 300;
+    a:hover {
+      color: $primary;
+    }
+  }
+  mark {
+    display: inline-block;
+    padding: 5px;
+    color: #FFF;
+    background: $primary;
+  }
+  em {
+    color: $primary;
+  }
+  small, .small {
+    display: block;
+    font-size: 0.875em;
+    line-height: 1.643em;
+  }
+  .big {
+    font-size: 1.2em;
+  }
+  time {
+    &:before{
+      padding-right: 8px;
+    }
+  }
+  hr{
+    height: 1px;
+    width: 100%;
+    display: none;
+    padding: 0;
+    background: rgba($default, 0.04);
+  }
+  p span{
+    line-height: 35px;
+  }
+  /*
+  * @subsection   Offsets
+  * @description  Describes vertical indentation between the elements
+  */
+  h2 + .btn {
+   margin-top: 38px;
+  }
+  time + h3{
+    margin-top: 6px;
+  }
+  * + h3 {
+    margin-top: 26px;
+  }
+  * + h4 {
+    margin-top: 33px;
+  }
+  h4 + p{
+     margin-top: 18px;
+  }
+  span + h4{
+     margin-top: 3px;
+  }
+  * + p {
+   margin-top: 32px;
+  }
+  * + .btn{
+  margin-top: 33px;
+  }
+  * + .marked-list-1 {
+    margin-top: 30px;
+  }
+  .top-container + .container {
+   margin-top: 76px;
+   @media (min-width: $screen-md-min) {
+     margin-top: rem(151px);
+   } 
+  }
+  .margin-negative-right + .btn{
+    margin-top: 40px;
+  }
+  * + .container-fluid{
+    margin-top: 66px;
+  }
+  * + .rd-mailform{
+    margin-top: 38px;
+  }
+  * + .offset {
+    &-1 {
+      margin-top: 6px;
+    }
+    &-2 {
+      margin-top: 35px;
+    }
+    &-3 {
+      margin-top: 30px;
+    }
+    &-4 {
+      margin-top: 65px;
+    }
+    &-5 {
+      margin-top: 0px;
+    }
+    &-6 {
+      margin-top: 51px;
+    }
+    &-7 {
+      margin-top: 50px;
+    }
+    &-8 {
+      margin-top: 40px;
+    }
+    &-9 {
+      margin-top: 68px;
+    }
+    &-10 {
+      margin-top: 8px;
+    }
+    &-11 {
+      margin-top: 42px;
+    }
+    &-12 {
+      margin-top: 30px;
+    }
+    &-13 {
+      margin-top: 38px;
+    }
+    &-14 {
+      margin-top: 72px;
+    }
+     &-15 {
+      margin-top: 50px;
+    }
+     &-16 {
+      margin-top: 80px;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+     * + .offset-3 {
+      margin-top: -25px;
+    } 
+     * + .offset-4 {
+      margin-top: 25px;
+    } 
+    * + .offset-5 {
+      margin-top: 49px;
+    } 
+    * + .offset-8 {
+      margin-top: rem(87px);
+    }
+    * + .offset-12 {
+     margin-top: 15px;
+    } 
+    * + .offset-15 {
+     margin-top: 0px;
+    }
+    * + .offset-16 {
+     margin-top: 0px;
+    }
+  }
+  .flow-offset-1 {
+    @include make-flow-offset(30px);
+  }
+  .container {
+    .rd-navbar-search-results{
+      .result-item + .result-item{
+        margin-top: 30px;
+      }
+    }
+  }
+  /*
+  * @subsection   Prefix
+  * @description  Describes instant left margin classes
+  */
+  .preffix {
+    &-1 {
+      margin-right: 0px;
+      @media (min-width: $screen-md-min) {
+       margin-right: 48px;
+     }
+   }
+  }
+  /*
+  * @subsection   Insets
+  * @description  Describes instant padding classes
+  */
+  .inset {
+    &-1 {
+      padding-left: 15px;
+    }
+    &-2 {
+      padding-top: 0px;
+    }
+    &-3 {
+      padding-top: 8px;
+    }
+    &-4 {
+      padding-left: 15px;
+   }
+    &-5 {
+      padding-top: 65px;
+    }
+    &-6 {
+      padding-top: 6px;
+    }
+    &-7 {
+      padding-top: 0px;
+      padding-bottom: rem(81px);
+    }
+    &-8 {
+      padding-top: rem(86px);
+      padding-bottom: rem(81px);
+    }
+    &-9 {
+      padding-left: 0px;
+   }
+  }
+  @media (min-width: $screen-md-min) {
+    .inset-1 {
+      padding-left: 65px;
+    } 
+    .inset-2 {
+      padding-top: rem(89px);
+    } 
+    .inset-4 {
+      padding-left: rem(88px);
+    } 
+    .inset-7 {
+      padding-top: 70px;
+    } 
+  } 
+  @media (min-width: $screen-lg-min) {
+     .inset-9 {
+      padding-left: 70px;
+    } 
+  } 
+  /*
+  * @subsection   Well
+  * @description  Describes section inner indents
+  */
+  .well-xs {
+    padding-top: 28px;
+    padding-bottom: 32px;
+  }
+  .well-sm {
+    padding-top: rem(60px);
+    padding-bottom: rem(39px);
+    @media (min-width: $screen-md-min) {
+     padding-top: rem(106px);
+    }
+  }
+  .well-md {
+    padding-top: rem(60px);
+    padding-bottom: rem(100px);
+    @media (min-width: $screen-md-min) {
+     padding-top: rem(100px);
+    }
+  }
+  .well-lg {
+    padding-top: rem(120px);
+    padding-bottom: rem(120px);
+  }
+  .well-xl {
+    padding-top: rem(150px);
+    padding-bottom: rem(150px);
+  }
+  /*
+  * @section      Helpers
+  * @description  This section holds various helper classes for
+  *               conditional page styling
+  */
+  .overflow_hid{
+    overflow: hidden;
+  }
+  .round {
+    border-radius: 50%;
+  }
+  .margin-negative-right{
+    margin-right: 0px;
+    @media (min-width: $screen-md-min) {
+      margin-right: rem(-100px);
+    }
+  }
+  .margin-negative-left{
+    margin-left: 0px;
+    @media (min-width: $screen-md-min) {
+      margin-left: rem(-100px);
+    }
+  }
+  .margin-negative-top{
+    margin-top: -60px;
+  }
+  .z-index-1{
+    position: relative;
+    z-index: 1;
+  }
+  time{
+    font-size: 16px;
+    color: $primary;
+  }
+  /*
+  * @subsection   Colors
+  */
+  html body .page { // Increases specificity to use with background helpers
+    .text-white {
+      color: $white;
+    }
+    .text-primary {
+      color: $primary;
+    }
+    .text-primary-1 {
+      color: $primary-1;
+    }
+  }
+  /*
+  * @subsection   Backgrounds
+  */
+  .bg-content1{
+    background: transparent url("../img/img01.jpg") no-repeat scroll 50% 0 / cover ;
+  }
+  .bg-primary-2{
+    background: darken(desaturate(adjust_hue($primary-1, 46.09090909090909), 93.25842696629213%), 17.45098039215686%);
+  }
+  .bg-primary-3{
+    background:darken(saturate(adjust_hue($white, 185.45454545454544), 100%), 2.1568627450980387%);
+  }
+  .bg-primary-4{
+    background:darken(saturate(adjust_hue($white, 225.00000000000006), 22.222222222222214%), 7.058823529411768%);
+  }
+  .bg-primary {
+    background: $primary;
+    &, #{headings()}{
+      color: $white;
+    }
+    .icon-primary{
+      color: $white;
+      border-color: $white;
+      background: transparent;
+      box-shadow: $box-shadow-ambient;
+    }
+    p, .list, .terms-list{
+      a:hover{
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .box-skin-1{
+    background: $primary-1;
+    padding: 67px 43px 60px;
+    color: $white;
+    h3{
+      span{
+        font-size: 40px;
+        line-height: 40px;
+        margin-right: 18px;
+        position: relative;
+        top: -2px;
+        display: inline-block;
+      }
+    }
+    p {
+      margin-top: 26px;
+    }
+    .btn{
+       margin-top: 53px;
+    }
+  }
+  /*
+  * @subsection   Pricing Box
+  */
+  .pricing-box{
+    background: $primary-1;
+    padding: 66px 10px 60px;
+    position: relative;
+    z-index: 2;
+    @media (min-width: $screen-lg-min) {
+     padding: 66px 40px 60px;
+   }
+    h3 , p {
+      color: $white;
+    }
+    p{
+      strong{
+        font-weight: 300;
+      }
+      margin-top: 50px;
+      position:relative;
+      span{
+        font-size: 52px;
+        line-height: 61px;
+        position:relative;
+        left: 1px;
+        top: -28px;
+        margin-right: 10px;
+        @media (min-width: $screen-md-min) {
+         margin-right: 22px;
+       }
+        span{
+          font-size: 30px;
+          line-height: 40px;
+          position:relative;
+          left: 0px;
+          top: 1px;
+          margin-right: 0px;
+        }
+      }
+    }
+    ul{
+      li{
+        p{
+          span{
+            line-height: 30px;
+            font-size: 20px;
+            top: 0px;
+            margin-right: 0px;
+            display: none;
+            @media (min-width: $screen-lg-min) {
+              display: inline-block;
+            }
+          }
+        }
+      }
+      p{
+        margin-top: 0px;
+      }
+      a{
+        color: $white;
+        font-weight: 300;
+  
+        &:hover , &:active{
+          color: $primary;
+        }
+      }
+    }
+    .btn{
+      margin-top: 53px;
+    }
+  }
+  /*
+  * @subsection   List
+  */
+  .list{
+    li + li{
+      margin-top: 10px;
+    }
+  }
+  /*
+  * @subsection   Inline List
+  */
+  .inline-list {
+    margin-top:0px;
+    @media (min-width: $screen-md-min) {
+     margin-top:30px;
+   }
+   @media (min-width: $screen-lg-min) {
+    margin-top:0px;
+  }
+    li + li{
+      margin-left: 5px;
+    }
+    > li {
+      display: inline-block;
+    }
+  }
+  /*
+  * @subsection   Marked List
+  */
+  .rd-navbar-inner .rd-navbar-megamenu .marked-list {
+    text-align: left;
+    p{
+      margin-top: 0;
+      color: $white;
+    }
+    a{
+      color: $white;
+      font-size: 20px;
+      margin-left: 6px;
+    }
+    > li {
+      position: relative;
+      
+      & + li {
+        margin-left: 0px;
+      }
+      > a:hover {
+        color: $primary;
+      }
+    }
+  }
+  .marked-list-1{
+    position:relative;
+    margin-left: rem(-143px);
+    left: 50%;
+    @media (min-width: $screen-md-min) {
+      position:relative;
+      margin-left: -0px;
+      left: 0%;
+    }
+    text-align: left;
+    li + li{
+      margin-top: 14px;
+    }
+    li{
+      position: relative;
+      padding-left: 27px;
+      &:before{
+        content: '\f00c';
+        position: absolute;
+        left: 0;
+        top: 0;
+        font: 400 18px 'FontAwesome';
+        line-height: inherit;
+        color: $primary;
+      }
+      a{
+        font-size: 14px;
+        @media (min-width: $screen-md-min) {
+          font-size: 20px;
+        }
+        &:hover{
+          color: $primary;
+        }
+      }
+    }
+  }
+  .marked-list-2{
+    padding: 39px 0px 39px 50px;
+    width: 100%;
+    float: none;
+    left: 0%;
+    margin-left: 0px;
+    @media (min-width: $screen-sm-min) {
+     float: left;
+     width: 50%;
+     padding: 89px 0px 89px 50px;
+   }
+   @media (min-width: $screen-lg-min) {
+    padding: 89px 70px 89px 0px;
+  }
+  li + li {
+    margin-top: 15px;
+  }
+  a{
+    font-size: 16px;
+    @media (min-width: $screen-sm-min) {
+      font-size: 20px;
+    }
+  }
+  }
+  .marked-list-2 + .marked-list-2{
+    margin-top: 0;
+  }
+  /*
+  * @subsection   Index List
+  */
+  .index-list {
+    counter-reset: li;
+    > li {
+      > .index-list__counter{
+        &:before {
+          content: counter(li, decimal-leading-zero) '.';
+          counter-increment: li;
+        }
+      }
+    }
+    // Sets offset between list rows
+    @include make-flow-offset(30px);
+  }
+  /*
+  * @subsection   Ordered List
+  */
+  .ordered-list {
+    > li {
+      padding-left: 20px;
+      list-style-type: decimal;
+    }
+  }
+  /*
+  * @subsection   Terms  List
+  */
+  .terms-list {
+    margin-top: 31px;
+    font-weight: 100;
+    dd{
+       margin-top: 18px;
+       line-height: 35px;
+       &:last-child{
+        margin: 35px 0 64px;
+       }
+       a{
+        &:hover{
+          color: $primary-1;
+        }
+       }
+    }
+    > dd + dt {
+      margin-top: 33px;
+    }
+  }
+  /*
+  * @subsection   News post
+  */
+  .news-post{
+    li + li{
+      margin-top: rem(144px);
+    }
+  }
+  /*
+  * @subsection   Link
+  */
+  .link {
+    display: inline-block;
+  }
+
+  /*
+  * @section      Extensions
+  * @description  This section holds some of style declarations for necessary
+  *               scripts
+  */
+
+  
+  /*
+  * @section      Page Header
+  * @description  This section holds specific style redeclarations for some
+  *               of common elements in page header
+  */
+  .page-header {
+    padding-top:0px;
+    padding-bottom: 60px;
+    @media (min-width: $screen-sm-min) {
+      padding: 57px 0 84px;
+    }
+    .top-container {
+     padding-top: 55px;
+     @media (min-width: $screen-md-min) {
+      padding-top: rem(135px);
+    }
+  }
+  }
+  .page-header1 {
+    padding: 0px;
+    @media (min-width: $screen-sm-min) {
+      padding: 57px 0 62px;
+    }
+  }
+  /*
+  * @section      Page Content
+  * @description  This section holds specific style redeclarations for some
+  *               of common elements in page content
+  */
+  .page-content {
+    .desktop & {
+      min-height: 100vh;
+    }
+  }
+  /*
+  * @section      Page Footer
+  * @description  This section holds specific style redeclarations for some
+  *               of common elements in page footer
+  */
+  .page-footer {
+     padding: 50px 0 116px;
+    color: lighten(saturate(adjust_hue($contrast, 217.50000000000009), 3.9603960396039604%), 60.392156862745104%);
+    font-size: 16px;
+    .nav{
+      display: inline-block;
+        margin-top: 11px;
+      li + li{
+        margin-left: 0px;
+        @media (min-width: $screen-md-min) {
+          margin-left: 51px;
+        }
+      }
+      li{
+        display: block;
+        @media (min-width: $screen-md-min) {
+          display: inline-block;
+        }
+        a{
+          color: $white;
+          line-height: 24px;
+          font-weight: 100;
+          &:hover , &:active{
+            color: $primary;
+          }
+        }
+        &.active > a{
+            color: $primary;
+          }
+      }
+    }
+    address{
+     margin-top: 0px;
+     @media (min-width: $screen-md-min) {
+       margin-top: 30px;
+     }
+     @media (min-width: $screen-lg-min) {
+      margin-top: 9px;
+    }
+    span{
+      left: 5px;
+      margin-right: 14px;
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+    }
+      a:hover{
+        color: $primary;
+      }
+    }
+    .brand{
+      float: none;
+      @media (min-width: $screen-md-min) {
+        float: left;
+     }
+    }
+  }
+  .copyright {
+    margin-top: 10px;
+    float: none;
+    @media (min-width: $screen-md-min) {
+      margin-top: 21px;
+      float: right;
+    }
+    p span {
+      position: relative;
+      top: -3px;
+    }
+    p{
+     font-size: 12px;
+     @media (min-width: $screen-sm-min) {
+      font-size: 16px;
+    }
+  }
+     div {
+      position: relative;
+      top: -5px;
+      text-align: center;
+      @media (min-width: $screen-md-min) {
+        text-align: right;
+      }
+      p a{
+        color: $primary;
+        &:hover{
+          color: lighten(saturate(adjust_hue($contrast, 217.50000000000009), 3.9603960396039604%), 60.392156862745104%);
+        }
+      }
+  }
+  }
