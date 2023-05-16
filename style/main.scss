@@ -950,8 +950,10 @@ html {
   * @description  This section holds specific style redeclarations for some
   *               of common elements in page footer
   */
+
   .page-footer {
-     padding: 50px 0 116px;
+    height: 550px;
+    padding: 50px 0 116px;
     color: lighten(saturate(adjust_hue($contrast, 217.50000000000009), 3.9603960396039604%), 60.392156862745104%);
     font-size: 16px;
     .nav{

@@ -183,7 +183,7 @@ a, button, input {
   font-family: "Material Icons";
   font-weight: 400;
   font-style: normal;
-  font-size: inherit;
+  font-size: 30px;
 }
 
 .material-icons-3d_rotation:before {
@@ -12231,6 +12231,7 @@ html body .page .text-primary-1 {
 *               of common elements in page footer
 */
 .page-footer {
+  height: 550px;
   padding: 50px 0 116px;
   color: #96999e;
   font-size: 16px;
