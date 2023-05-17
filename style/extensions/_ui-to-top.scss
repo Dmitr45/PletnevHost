@@ -2,6 +2,7 @@
 * @subsection   ToTop
 */
 .ui-to-top {
+    display: block;
     width: 60px;
     height: 60px;
     font-size: 40px;
@@ -15,9 +16,11 @@
     overflow: hidden;
     text-align: center;
     text-decoration: none;
-    z-index: 20;
+    z-index: 200;
+    cursor: pointer;
+
   
-    @include transform(translateY(100px));
+    /* @include transform(translateY(100px)); */
   
     &:hover {
       color: #FFF;
@@ -25,9 +28,9 @@
       text-decoration: none;
     }
   
-    &.active{
+    /* &.active{
       @include transform(translateY(0));
-    }
+    } */
   }
   
   .mobile .ui-to-top,

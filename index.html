@@ -3,7 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="./style/main.css">
-    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js" defer></script>
+    <script src="./js/index.js" defer></script>
 </head>
     <!-- Site Title -->
     <title>Pletnev Services</title>
@@ -53,10 +54,13 @@
                                 <a href="#price">Тарифы</a>
                             </li>
                             <li>
-                                <a href="https://livedemo00.template-help.com/wt_58186/index-4.html">Контакты</a>
+                                <a href="#SendMessage">Контакты</a>
                             </li>
                             <li>
                                 <a href="#footer">Реквизиты</a>
+                            </li>
+                            <li>
+                                <a href="http://pletnevhost.ru:1500/ispmgr">Личный кабинет</a>
                             </li>
                         </ul>
                         <!-- END RD Navbar Nav -->
@@ -67,12 +71,69 @@
 
                 </div>
             </nav>
+           <!-- Выезжающее фиксированное меню-->
+            <nav class="rd-navbar rd-navbar--is-clone rd-navbar-static " data-rd-navbar-lg="rd-navbar-static" id="FixedNav">
+                <div class="rd-navbar-inner">
+                    <!-- RD Navbar Panel -->
+                    <div class="rd-navbar-panel">
+                        <!-- RD Navbar Toggle -->
+                        <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar"><span></span></button>
+                        <!-- END RD Navbar Toggle -->
+                        <!-- RD Navbar Collapse Toggle -->
+                        <button class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".link1 , .rd-navbar-collapse">
+                            <span></span>
+                        </button>
+                        <div class="rd-navbar-collapse">
+                            <address>
+                                <a href="callto:#"><span class="material-icons-phone"></span>+7 952 902 5968</a> 
+                            </address>
+                        </div>
+                        <!-- END RD Navbar Collapse Toggle -->
+                        <!-- RD Navbar Brand -->
+                        <div class="rd-navbar-brand">
+                            <a href="https://#" class="brand-name primary-color">
+                                <span class="text-sbold"> Pletnev WebService </span><span class="brand-slogan text-thin">company</span>
+                            </a>
+                        </div>
+                        <!-- END RD Navbar Brand -->
+                    </div>
+                    <!-- END RD Navbar Panel -->
+                    <div class="rd-navbar-nav-wrap">
+                        <!-- RD Navbar Nav -->
+                        <ul class="rd-navbar-nav">
+                            <li class="active rd-navbar--has-megamenu rd-navbar-submenu">
+                                <a href="#servic">Услуги</a>
+                            <span class="rd-navbar-submenu-toggle"></span></li>
+                            <li>
+                                <a href="#price">Тарифы</a>
+                            </li>
+                            <li>
+                                <a href="#SendMessage">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#footer">Реквизиты</a>
+                            </li>
+                            <li>
+                                <a href="http://pletnevhost.ru:1500/ispmgr">Личный кабинет</a>
+                            </li>
+                        </ul>
+                        <!-- END RD Navbar Nav -->
+                            <address>
+                            <a href="callto:#"><span class="material-icons-phone"></span>+7 952 902 5968</a>
+                            </address>  
+                    </div>
+
+                </div>
+            </nav>
+
+
+
         </div>
         <!-- END RD Navbar -->
         <div class="container top-container text-center text-sm-left wow animate__animated animate__lightSpeedInRight animate__delay-0.5s" style="visibility: visible;">
           <h2>Возьмем на себя все заботы о сайте!</h2> <h4> Веб-дизайн, верстка, программирование <br> Хостинг с резервным копированеим  <br>  Техническое сопровождение <br> Наполнение контентом <br> SEO продвижение</h4>
     <br>
-          <a class="btn btn-sm btn-default" href="http://pletnevhost.ru:1500/ispmgr">Пиши в телеграмм !</a>
+          <a class="btn btn-sm btn-default" href="#contact">Обсудить</a>
       </div>
       <div class="container text-center text-md-left">
           <div class="row">
@@ -99,19 +160,19 @@
         <section class="well-sm" id="servic">  
             <div class="container">
                 <div class="row">
-                    <div class="col-md-5 wow fadeInLeft animate__animated animate__lightSpeedInLeft animate__delay-2s" style="visibility: visible;">
+                    <div class="col-md-5 wow fadeInLeft animate__animated animate__lightSpeedInLeft"  >
                         <h3>Нам интересны эффективные решения сложных задач. Услуги доступны как по цене, так и по времени.</h3>
                     </div>
-                    <div class="col-md-7 offset-1 wow fadeInRight animate__animated animate__lightSpeedInRight animate__delay-2s" style="visibility: visible;">
+                    <div class="col-md-7 offset-1 wow fadeInRight animate__animated animate__lightSpeedInRight">
                         <p>
                             <span>
-                                Работаем с любыми клиентами, в том числе и с госучреждениями по ФЗ-44 и ФЗ-223. <br>
-                                Это современная система обслуживания веб-сайта. У нас вы заказываете разработку сайта и мы же следим за его правильной работой в течение нескольких лет, 
-                                внося необходимые изменения. Мы создаем систему обслуживания для вашего бизнеса, где вся ответственность лежит на конкретном человеке, на мне - Плетневе Дмитрие.
-                                Я всегда на связи и готов помочь. 
-                            </span>
+                                "Работаем с любыми клиентами, в том числе и с госучреждениями по ФЗ-44 и ФЗ-223. <br>
+                                Это современная система обслуживания веб-сайта. У нас вы заказываете разработку сайта и мы же следим за его правильной работой в течение нескольких лет. 
+                                Своевременно вносим изменения, продляем лицензии и домен. Мы создаем систему обслуживания для вашего бизнеса, где вся ответственность лежит на конкретном человеке, на мне.
+                                Я всегда на связи и готов помочь. " - 
+                            </span><a href="http://pletnevd.com" style="color: #ee2748;"  target="_blank"> Плетнев Дмитрий</a>
                         </p>
-                        <a class="btn btn-sm btn-default" href="https://livedemo00.template-help.com/wt_58186/index.html#">Давай знакомиться!</a>
+                        <a class="btn btn-sm btn-default" href="#contact">Давай знакомиться!</a>
                     </div>
                 </div>
             </div>
@@ -119,7 +180,7 @@
 
     <!-- End We bring effective -->
     <!-- What we offer -->
-        <section class="well-sm text-center text-md-left">
+        <section class="well-sm text-center text-md-left" id="offer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -134,7 +195,7 @@
                                 <div class="margin-negative-right">                            
                                     <img width="470" height="360" src="./img/img02.jpg" alt="">                    
                                 </div>
-                                <a class="btn btn-xs btn-default" href="https://livedemo00.template-help.com/wt_58186/index.html#">Задай вопрос !</a>
+                                <a class="btn btn-xs btn-default" href="#contact">Задай вопрос !</a>
                             </div>
                         </div>
                     </div>
@@ -244,7 +305,7 @@
                                 <p><span>—</span> Кроссбраузерность</p>
                             </li>
                         </ul>
-                        <a class="btn btn-xs btn-primary" href="https://livedemo00.template-help.com/wt_58186/index.html#">Начнем !</a>
+                        <a class="btn btn-xs btn-primary" href="#contact">Начнем !</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -268,7 +329,7 @@
                                 <p><span>—</span> Перенос сайта</p>
                             </li>
                         </ul>
-                                                <a class="btn btn-xs btn-primary" href="https://livedemo00.template-help.com/wt_58186/index.html#">Начнем !</a>
+                                                <a class="btn btn-xs btn-primary" href="#contact">Начнем !</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -292,7 +353,7 @@
                                 <p><span>—</span> Защита от DDoS</p>
                             </li>
                         </ul>
-                        <a class="btn btn-xs btn-primary" href="https://livedemo00.template-help.com/wt_58186/index.html#">Начнем !</a>
+                        <a class="btn btn-xs btn-primary" href="#contact">Начнем !</a>
                     </div>
                 </div>
             </div>
@@ -300,7 +361,7 @@
     </section>
     <!-- End Our plans -->
     <!-- RD Google Map -->
-        <div class="rd-google-map margin-negative-top">
+    <!--    <div class="rd-google-map margin-negative-top">
             <div id="google-map" class="rd-google-map__model"></div>
             <ul class="rd-google-map__locations">
                 <li data-x="-73.9898268" data-y="40.649980" data-basic="images/gmap_marker.png" data-active="images/gmap_marker_active.png">
@@ -309,22 +370,67 @@
                 </p>
             </li>
         </ul>
-    </div>
+    </div> -->
+
+    <section class="well-sm" id="SendMessage">
+        <div class="container inset-3">
+            <h3>Отправьте сообщение мне в Телеграмм</h3>
+            <br>
+        <div>  
+            <form class="rd-mailform" id="tg"  >
+                <input type="hidden" name="form-type" value="contact">
+                <fieldset>
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label data-add-placeholder="" class="mfInput">
+                                <input type="text" name="InputName" data-constraints="@NotEmpty @LettersOnly" class="" id="InputName">
+                            <span class="mfValidation show error" data-index="0">Это поле не должно быть пустым</span><span class="mfPlaceHolder default">Имя</span></label>
+                        </div>
+                           <div class="col-md-4">
+                            <label data-add-placeholder="" class="mfInput">
+                                <input type="tel" name="InputTel" data-constraints="@Phone" class="" id="InputTel">
+                                <span class="mfValidation show error" data-index="0">Это поле не должно быть пустым</span><span class="mfPlaceHolder default">Телефон</span></label>
+                            </div>
+                            <div class="col-md-4">
+                                <label data-add-placeholder="" class="mfInput">
+                                    <input type="text" name="InputEmail" data-constraints="@NotEmpty @Email" id="InputEmail">
+                                <span class="mfValidation show error" data-index="0">Это поле не должно быть пустым</span><span class="mfPlaceHolder default">Email</span></label>
+                            </div>
+                    </div>    
+
+                        <label data-add-placeholder="" class="mfInput">
+                        <textarea name="InputText" data-constraints="@NotEmpty" id="InputText"></textarea>
+                    <span class="mfValidation show error" data-index="0">Это поле не должно быть пустым</span><span class="mfPlaceHolder default">Сообщение</span></label>
+
+                        <label data-add-placeholder="" class="mfInput">
+                        <input type="file" class="input_file" id="InputFile" name="InputFile" >
+                        </label>
+                        <div id="success" class="success"></div>
+
+                        <div class="mfControls btn-group">
+                            <button class="btn btn-sm btn-default" type="submit">Отправить</button>
+                        </div>
+                </fieldset>
+            </form>
+
+            
+        </div>
+    </section>
+
+
 
     <!-- End RD Google Map -->
     <!-- RD Mailform -->   
-    <section class="well-xs bg-primary">
+    <section class="well-xs bg-primary" id="mailform">
         <div class="container">
-            <div class="row">
+        <!--   <div class="row">
                 <div class="col-md-6 ">
                     <h3 class="text-white text-light">Don't miss our new offerings and newsletter updates.</h3>
                 </div>
                 <div class="col-md-6 ">
-                    <!-- RD Mailform -->
                     <form class="rd-mailform rd-mailform1" method="post" action="https://livedemo00.template-help.com/wt_58186/bat/rd-mailform.php">
-                        <!-- RD Mailform Type -->
                         <input type="hidden" name="form-type" value="contact">
-                        <!-- END RD Mailform Type -->
                         <fieldset>
                             <label data-add-placeholder="" class="mfInput">
                                 <input type="text" name="email" data-constraints="@NotEmpty @Email ">
@@ -336,7 +442,7 @@
                         </fieldset>
                     </form>
                 </div>
-            </div>
+            </div> --> 
         </div>
     </section>
     <!-- END RD Mailform -->
@@ -357,7 +463,7 @@
                             <a href="#price">Тарифы</a>
                         </li>
                         <li>
-                            <a href="https://livedemo00.template-help.com/wt_58186/index-4.html">Контакты</a>
+                            <a href="#SendMessage">Контакты</a>
                         </li>
                         <li>
                             <a href="#footer">Реквизиты</a>
@@ -403,6 +509,10 @@
                     </p>
                 </div> 
             </div> 
+        </div>
+
+
+        <div id="up"  class="ui-to-top material-icons-expand_less">
         </div>
     </footer>
 </div>
