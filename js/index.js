@@ -98,7 +98,7 @@ function TelegramMessage(){
 //Вызов функций
 ButtonScrollUp("#up" , 5); 
 NavFixedcroll("#FixedNav" , 5);
-DivScrollVisibility("#servic", 600 , 5);
+DivScrollVisibility("#servic", 500 , 0);
 DivScrollVisibility("#offer", 1000 , 5);
 DivScrollVisibility("#price", 1300 , 5);
 DivScrollVisibility("#SendMessage", 1600 , 5);
